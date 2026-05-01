@@ -57,7 +57,6 @@ Insight:
   - Using recall as the primary evaluation metric
   - Testing sampling strategies like SMOTE
 
-Insight:
 <img width="853" height="737" alt="image" src="https://github.com/user-attachments/assets/b5f03d6d-5ed0-4040-91e1-a048ac5f88e5" />
 
 Insight:
@@ -70,3 +69,24 @@ Insight:
 - Most features show low to moderate correlation, meaning:
   - Low multicollinearity
   - Features provide independent predictive value
+ 
+## Key Takeaways from EDA
+  - Strong class imbalance required special handling
+  - Healthcare utilization features are closely related
+  - Relationships are not purely linear, supporting use of ensemble models
+  - Feature independence suggests models like boosting can perform well
+
+# Modeling Approach
+
+## Baseline Model
+ - Decision Tree
+ - Recall: 22%
+Highlighted severe bias toward majority class
+
+<img width="801" height="388" alt="image" src="https://github.com/user-attachments/assets/a9a23173-af12-4c72-b7e3-4918a161d0bc" />
+
+Advanced Models
+Random Forest
+Decision Tree
+Gradient Boosting / XGBoost
+LightGBM (Final Model)
