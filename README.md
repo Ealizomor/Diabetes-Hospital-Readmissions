@@ -46,7 +46,6 @@ This dataset provides a comprehensive view of patient encounters, combining clin
 <img width="1028" height="667" alt="image" src="https://github.com/user-attachments/assets/7fce022b-f789-42cf-8fb9-5ed558da7d2e" /> 
 
 Insight:
-
 - The dataset is highly imbalanced:
   - Majority class: No readmission
   - Minority class: <30 days readmission
@@ -60,12 +59,12 @@ Insight:
 <img width="853" height="737" alt="image" src="https://github.com/user-attachments/assets/b5f03d6d-5ed0-4040-91e1-a048ac5f88e5" />
 
 Insight:
-
 - Moderate correlation between:
   - time_in_hospital ↔ num_medications (0.47)
   - num_medications ↔ num_procedures (0.39)
     
-- Indicates that patients with longer stays tend to receive more treatments.
+Indicates that patients with longer stays tend to receive more treatments.
+  
 - Most features show low to moderate correlation, meaning:
   - Low multicollinearity
   - Features provide independent predictive value
@@ -117,7 +116,7 @@ Insight:
 
 # Results
 
-Metrics Used:
+#### Metrics Used:
   - Recall (Primary): minimize false negatives (critical in healthcare)
   - F1-score: balance precision and recall
   - Accuracy used only as a secondary reference
@@ -129,3 +128,39 @@ Metrics Used:
 | Recall    | ~0.65 |
 | F1-score  | ~0.64 |
 
+#### Model Comparison
+| Model             | Recall    |
+| ----------------- | --------- |
+| Decision Tree     | 0.22      |
+| Random Forest     | ~0.01–low |
+| Esemeble Modeling | ~0.15     |
+| **LightGBM**      | **~0.65** |
+
+# Model Interpretation
+ SHAP was used (SHapley Additive Explanations) to interpret the model.
+
+#### Techniques Used:
+- Feature importance
+- SHAP beeswarm plots
+- SHAP waterfall (individual predictions)
+
+#### Key Findings:
+ - Most important features:
+ - Number of emergency visits
+ - Number of inpatient stays
+ - Medication-related variables
+
+#### What Drives Predictions:
+ - High healthcare utilization → higher readmission risk
+ - Medication changes influence stability
+ - Nonlinear interactions captured by boosting
+<img width="639" height="514" alt="image" src="https://github.com/user-attachments/assets/ae0a644f-f8d9-4684-93ff-27a14070e07e" />  <img width="639" height="513" alt="image" src="https://github.com/user-attachments/assets/53d51afb-8c11-4b93-ad83-815bc448572d" />
+
+<img width="626" height="598" alt="image" src="https://github.com/user-attachments/assets/bf589978-0f2b-4ce0-955c-46ae22aeb143" />
+
+# Key Insights
+- Healthcare utilization is the strongest predictor
+- High-cardinality features retain value when not overly simplified
+- Medication features significantly improve recall
+- Boosting models outperform simpler models
+- Iteration revealed that some intuitive steps (e.g., diagnosis grouping) reduced performance
