@@ -88,7 +88,7 @@ Insight:
   - Random Forest
   - Decision Tree
   - Ensemble Modeling
-  - ### LightGBM (Final Model)
+  - LightGBM (Final Model)
     
  - ## Why These Models?
    Random Forest - Improved upon Decision Trees by combining multiple trees to reduce overfitting and improve generalization. It is effective for structured data and can capture more complex patterns than a single tree.
