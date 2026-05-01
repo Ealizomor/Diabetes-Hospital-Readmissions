@@ -63,7 +63,7 @@ Insight:
   - time_in_hospital ↔ num_medications (0.47)
   - num_medications ↔ num_procedures (0.39)
     
-Indicates that patients with longer stays tend to receive more treatments.
+- Indicates that patients with longer stays tend to receive more treatments.
   
 - Most features show low to moderate correlation, meaning:
   - Low multicollinearity
