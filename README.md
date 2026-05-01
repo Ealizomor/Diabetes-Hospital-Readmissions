@@ -122,9 +122,10 @@ Metrics Used:
   - F1-score: balance precision and recall
   - Accuracy used only as a secondary reference
     
-                Final Model Performance (LightGBM)
-                | Metric    | Score |
-                | --------- | ----- |
-                | Precision | ~0.64 |
-                | Recall    | ~0.65 |
-                | F1-score  | ~0.64 |
+#### Final Model Performance (LightGBM)
+| Metric    | Score |
+| --------- | ----- |
+| Precision | ~0.64 |
+| Recall    | ~0.65 |
+| F1-score  | ~0.64 |
+
