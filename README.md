@@ -42,3 +42,31 @@ Overall, this project demonstrates how machine learning can be applied to suppor
   - Hospital Information: admission type, discharge disposition, payer code
 
 This dataset provides a comprehensive view of patient encounters, combining clinical, behavioral, and administrative factors relevant to readmission risk.
+
+<img width="1028" height="667" alt="image" src="https://github.com/user-attachments/assets/7fce022b-f789-42cf-8fb9-5ed558da7d2e" /> 
+
+Insight:
+
+- The dataset is highly imbalanced:
+  - Majority class: No readmission
+  - Minority class: <30 days readmission
+    
+- This imbalance explains why early models struggled with recall.
+- It also justifies:
+  - Combining “<30” and “>30” into one class
+  - Using recall as the primary evaluation metric
+  - Testing sampling strategies like SMOTE
+
+Insight:
+<img width="853" height="737" alt="image" src="https://github.com/user-attachments/assets/b5f03d6d-5ed0-4040-91e1-a048ac5f88e5" />
+
+Insight:
+
+- Moderate correlation between:
+  - time_in_hospital ↔ num_medications (0.47)
+  - num_medications ↔ num_procedures (0.39)
+    
+- Indicates that patients with longer stays tend to receive more treatments.
+- Most features show low to moderate correlation, meaning:
+  - Low multicollinearity
+  - Features provide independent predictive value
