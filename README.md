@@ -84,8 +84,16 @@ Insight:
    
 <img width="801" height="388" alt="image" src="https://github.com/user-attachments/assets/a9a23173-af12-4c72-b7e3-4918a161d0bc" />
 
-Advanced Models
-Random Forest
-Decision Tree
-Gradient Boosting / XGBoost
-LightGBM (Final Model)
+- ## Advanced Models
+  - Random Forest
+  - Decision Tree
+  - Ensemble Modeling
+  - ## LightGBM (Final Model)
+    
+ - ## Why These Models?
+   Random Forest - Improved upon Decision Trees by combining multiple trees to reduce overfitting and improve generalization. It is effective for structured data and can capture more complex patterns than a single tree.
+
+   Ensemble Modeling (Boosting) - Improved performance by focusing on errors from previous models, making them well-suited for difficult problems like imbalanced classification.
+
+   LightGBM - Achieved approximately 64–65% recall, significantly improving the model’s ability to detect high-risk patients compared to the baseline.
+   
