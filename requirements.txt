@@ -1,0 +1,17 @@
+numpy / pandas → data manipulation
+
+matplotlib / seaborn → visualizations (EDA + plots)
+
+scikit-learn → modeling, metrics, preprocessing
+
+lightgbm → final model
+
+xgboost → comparison model
+
+shap → model interpretability
+
+imbalanced-learn → SMOTE / sampling
+
+scipy → statistical functions
+
+jupyter / notebook → running notebooks
