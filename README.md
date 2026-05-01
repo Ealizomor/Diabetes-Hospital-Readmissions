@@ -20,7 +20,7 @@ A complete data science pipeline was implemented, including data preprocessing, 
 The final model, LightGBM, was selected for its ability to handle high-cardinality clinical features and capture nonlinear relationships.
 
 - Final Recall: ~64–65%
-- Baseline Recall: 22% (Decision Tree)
+- Baseline Recall: ~22% (Decision Tree)
 
 This represents a substantial improvement in identifying high-risk patients. Additionally, SHAP was used to provide model interpretability, ensuring that predictions are transparent and aligned with clinical reasoning.
 
