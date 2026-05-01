@@ -131,7 +131,7 @@ Indicates that patients with longer stays tend to receive more treatments.
 #### Model Comparison
 | Model             | Recall    |
 | ----------------- | --------- |
-| Decision Tree     | 0.22      |
+| Decision Tree     | ~0.22     |
 | Random Forest     | ~0.01–low |
 | Esemeble Modeling | ~0.15     |
 | **LightGBM**      | **~0.65** |
@@ -164,3 +164,10 @@ Indicates that patients with longer stays tend to receive more treatments.
 - Medication features significantly improve recall
 - Boosting models outperform simpler models
 - Iteration revealed that some intuitive steps (e.g., diagnosis grouping) reduced performance
+
+#### Business Impact:
+Improved recall enables hospitals to identify more high-risk patients, supporting targeted interventions and reducing preventable readmissions.
+
+# Conclusion
+This project demonstrates that machine learning can effectively predict hospital readmissions using structured healthcare data.
+By prioritizing recall and incorporating interpretability, the final model provides a strong foundation for clinical decision support systems.
