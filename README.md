@@ -97,3 +97,34 @@ Insight:
 
    LightGBM - Achieved approximately 64–65% recall, significantly improving the model’s ability to detect high-risk patients compared to the baseline.
    
+# Model Training
+Tools: Python, scikit-learn, LightGBM
+Train/Test Split: 80/20 (stratified)
+Validation: Cross-validation for stability
+
+## Hyperparameters
+  - max_depth
+  - n_estimators
+  - learning_rate
+  - subsample
+
+## Training Process:
+1. Preprocess and encode data
+2. Apply sampling strategies (SMOTE, RUS tested)
+3. Train models on training set
+4. Validate using cross-validation
+5. Evaluate on unseen test set
+
+# Results
+
+Metrics Used:
+  - Recall (Primary): minimize false negatives (critical in healthcare)
+  - F1-score: balance precision and recall
+  - Accuracy used only as a secondary reference
+    
+Final Model Performance (LightGBM)
+| Metric    | Score |
+| --------- | ----- |
+| Precision | ~0.64 |
+| Recall    | ~0.65 |
+| F1-score  | ~0.64 |
