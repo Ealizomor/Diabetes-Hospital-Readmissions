@@ -33,7 +33,7 @@ Overall, this project demonstrates how machine learning can be applied to suppor
 - Type: Structured healthcare data (tabular)
 - Size:
   - ~102,000 patient encounters
-  - 47 features
+  - ~47 features
 - Key Features:
   - Demographics: age, race, gender
   - Clinical Information: diagnosis codes (primary, secondary), lab results (A1C, glucose)
